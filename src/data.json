@@ -1,0 +1,16 @@
+{
+    "brands": [
+      { "id": 1, "brandname": "Maruthi Suzuki", "img": "../assets/brands/maruthi.png" },
+      { "id": 2, "brandname": "Hyundai", "img": "../assets/brands/hyundai.png" },
+      { "id": 3, "brandname": "Renault", "img": "../assets/brands/renault.jpg" },
+      { "id": 4, "brandname": "Honda", "img": "../assets/brands/honda.png" },
+      { "id": 5, "brandname": "Tata", "img": "../assets/brands/tata.png" },
+      { "id": 6, "brandname": "Ford", "img": "../assets/brands/ford.jpg" },
+      { "id": 7, "brandname": "Volkswagen", "img": "../assets/brands/volkswagen.png" },
+      { "id": 8, "brandname": "Mahendra", "img": "../assets/brands/mahendra.png" },
+      { "id": 9, "brandname": "Toyota", "img": "../assets/brands/toyoto.jpg" },
+      { "id": 10, "brandname": "BMW", "img": "../assets/brands/bmw.png" },
+      { "id": 11, "brandname": "Mercedes-Benz", "img": "../assets/brands/benz.jpg" }
+    ]
+  }
+  

@@ -1,0 +1,14 @@
+.brand_container > img {
+    width: 100% !important; 
+
+}
+
+.brand_container:hover{
+    cursor: pointer;
+}
+
+.selected {
+    border: 2px solid #007bff; 
+    background-color: #f0f0f0; 
+}
+  
