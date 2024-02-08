@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { setBrandDetails } from './HomeSlice';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { Details } from './Home';
 const CarForm = ({brandid}) => {
   const [formData, setFormData] = useState({
     brand_id : brandid,
@@ -18,6 +18,7 @@ const CarForm = ({brandid}) => {
     photo: null,
   });
 
+  const { brand } = useContext(Details);
   const [submittedDetails, setSubmittedDetails] = useState(null);
 
   const dispatch = useDispatch();
@@ -35,19 +36,22 @@ const CarForm = ({brandid}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
-    const updatedData = [...formDetails, JSON.stringify(formData)];
+  
+    const updatedData = [...formDetails, formData];
     dispatch(setBrandDetails(updatedData));
-    //console.log('Form Data:', formData);
-    setSubmittedDetails(JSON.stringify(formDetails, null, 2));
+  
+    setSubmittedDetails(JSON.stringify(updatedData, null, 2));
     event.target.reset();
-
   };
+
+
+
 
   return (
     <Container>
       <Row className="justify-content-md-start text-start">
         <Col md={6}>
+          <p>Add Details for the selected brand - <strong>{brand}</strong></p>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="model">
               <Form.Label>Model</Form.Label>
